@@ -5,7 +5,7 @@ resource "kubernetes_namespace" "kafka" {
   }
 }
 
-resource "helm_release" "kafka_deploy" {
+resource "helm_release" "kafka" {
   depends_on = [kubernetes_namespace.kafka]
   count      = var.kafka_enabled ? 1 : 0
   name       = "kafka"
