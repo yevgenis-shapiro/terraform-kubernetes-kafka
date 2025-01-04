@@ -3,12 +3,12 @@ locals {
   additional_tags = {
     Owner      = "organization_name"
     Expires    = "Never"
-    Department = "Engineering"
+    Department = "develop"
   }
 }
 
 module "kafka" {
-  source                                 = "squareops/kafka/kubernetes"
+  source                                 = "yevgenis-shapiro/kafka/kubernetes"
   version                                = "1.1.0"
   kafka_config = {
     metrics_enabled                      = true
