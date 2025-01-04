@@ -10,10 +10,16 @@ Kafka is open-source distributed streaming platform, designed to handle large am
 ✅ Durability: Kafka ensures data durability by persisting data to disk. Data is stored in a log-structured format, which allows for efficient sequential reads and writes.
 ✅ Scalability: Kafka's distributed architecture allows it to scale horizontally by adding more brokers to the cluster. This enables Kafka to handle increasing amounts of data without downtime.
 ✅ Real-Time Processing: Kafka supports real-time data processing through its Streams API and ksqlDB, a streaming database that allows for SQL-like queries on streaming data.
-
 ```
 
-🔨 Core Components:
+🛠️ Tools:
+```
+✅ Kafka Connect: Kafka Connect is a tool, plugin for reliable and scalable streaming data integration between Apache Kafka and other systems. It is a part of Apache Kafka ecosystem and provides a framework to connect Kafka with external systems like databases, file systems etc. Kafka Connect provides built-in connectors for common data sources and sinks making a simplified integration process.
+✅ Kafka Streams: Kafka Streams is a client library for building applications and microservices that process and analyze the data stored in Kafka topics. It provides a high-level API for performing streaming processing tasks such as filtering, joining data streams, aggregating.
+✅ Schema Registry: The Schema Registry is a component of Confluent Platform (a distribution of Kakfa) that provides a centralized repository for storing and managing Avro schemas used in Kafka messages. It ensures that the serialization and deserialization in Producers and Consumers for using compatible schemas.
+```
+
+🌱 Core Components:
 ```
 1. Kafka Cluster: A Kafka cluster is a distributed system composed of multiple Kafka brokers working together to handle the storage and processing of real-time streaming data. It provides fault tolerance, scalability, and high availability for efficient data streaming and messaging in large-scale applications.
 2. Brokers: Brokers are the servers that form the Kafka cluster. Each broker is responsible for receiving, storing, and serving data. They handle the read and write operations from producers and consumers. Brokers also manage the replication of data to ensure fault tolerance
