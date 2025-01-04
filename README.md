@@ -2,7 +2,22 @@
 ## Terraform Module - Apache Kafka | 🚀🚀🚀 
 Kafka is open-source distributed streaming platform, designed to handle large amounts of real-time data by providing scalable, fault-tolerant, low-latency platform for processing in real-time.
 
-🎯 Features
+🎯 Features of Kafka Architecture
+```
+✅ High Throughput and Low Latency: Kafka is designed to handle high volumes of data with low latency. It can process millions of messages per second with latencies as low as 10 milliseconds.
+✅ Fault Tolerance: Kafka achieves fault tolerance through data replication. Each partition can have multiple replicas, and Kafka ensures that data is replicated across multiple brokers. This allows the system to continue operating even if some brokers fail.
+✅ Durability: Kafka ensures data durability by persisting data to disk. Data is stored in a log-structured format, which allows for efficient sequential reads and writes.
+✅ Scalability: Kafka's distributed architecture allows it to scale horizontally by adding more brokers to the cluster. This enables Kafka to handle increasing amounts of data without downtime.
+✅ Real-Time Processing: Kafka supports real-time data processing through its Streams API and ksqlDB, a streaming database that allows for SQL-like queries on streaming data.
+
+```
+
+🔨 Example : Config
+
+```
+---
+
+🎯 Core Components of Kafka
 ```
 ✅ Kafka Cluster:
 A Kafka cluster is a distributed system composed of multiple Kafka brokers working together to handle the storage and processing of real-time streaming data. It provides fault tolerance, scalability, and high availability for efficient data streaming and messaging in large-scale applications.
@@ -18,12 +33,4 @@ Consumers are client applications that subscribe to Kafka topics and process the
 ZooKeeper is a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services. In Kafka, ZooKeeper is used to manage and coordinate the Kafka brokers. ZooKeeper is shown as a separate component interacting with the Kafka cluster.
 ✅ Offsets:
 Offsets are unique identifiers assigned to each message in a partition. Consumers will use these offsets to track their progress in consuming messages from a topic.
-```
-
-🔨 Example : Config
-
-```
-
----
-
 ```
