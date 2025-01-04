@@ -1,0 +1,19 @@
+## Kafka resource requests and limits
+resources:
+  limits:
+    cpu: 500m
+    memory: 1000Mi
+  requests:
+    cpu: 300m
+    memory: 500Mi
+
+
+affinity:
+  nodeAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      nodeSelectorTerms:
+      - matchExpressions:
+          - key: "Infra-Services"
+            operator: In
+            values:
+            - "true"
