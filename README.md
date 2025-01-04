@@ -1,4 +1,5 @@
-![kafka](https://github.com/user-attachments/assets/47c9d0a8-bb47-4b7d-b64d-817dcf6285ce)
+![kafka](https://github.com/user-attachments/assets/f1267f0a-58cc-4236-a543-98afecf9610b)
+
 ## Terraform Module - Apache Kafka | 🚀🚀🚀 
 Kafka is open-source distributed streaming platform, designed to handle large amounts of real-time data by providing scalable, fault-tolerant, low-latency platform for processing in real-time.
 
