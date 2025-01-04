@@ -23,3 +23,25 @@ Kafka is open-source distributed streaming platform, designed to handle large am
 6. ZooKeeper: ZooKeeper is a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services. In Kafka, ZooKeeper is used to manage and coordinate the Kafka brokers. ZooKeeper is shown as a separate component interacting with the Kafka cluster.
 7. Offsets: Offsets are unique identifiers assigned to each message in a partition. Consumers will use these offsets to track their progress in consuming messages from a topic.
 ```
+
+Example:
+```
+module "kafka" {
+  source                                   = "yevgenis-shapiro/kafka/kubernetes"
+  version                                  = "1.1.0"
+  kafka_config = {
+      metrics_enabled                      = true
+      heap_size_option                     = "-Xmx1024m -Xms1024m"
+      storage_class_name                   = "gp2"
+      kafka_pv_volume_size                 = "10Gi"
+      kafka_node_replica_count             = 2
+      default_partition_per_topic          = 1
+      default_replication_factor_per_topic = 1
+      zookeeper_enabled                    = true
+      zookeper_pv_volume_size              = "10Gi"
+      zookeper_node_replica_count          = 2
+      sasl_inter_broker_password           = ""
+      values_yaml                          = file("./config/values.yaml")
+  }
+}
+```
